@@ -1,0 +1,391 @@
+/*Generales*/
+*{
+
+	box-sizing: border-box;/*el tamaño de la caja se respeta*/
+
+
+}
+html{
+
+}
+body{
+
+	font-family: "Roboto Mono";/*letra del cuerpo*/
+}
+
+a{
+	/*los elementos se dra un alto del contenido en las ade html*/
+	display: inline-block;
+}
+
+header
+{
+	background-color: black;color de fondo*/
+	padding: 18px 0;/*margen hacia dentro arriba y abajo*/
+	top: 0;   
+	width: 100%;/*para que encabezado ocupe el 100% de lo ancho de la pantalla*/
+	/* el menu estara persiguiendonos a todos lados */
+	position: fixed;
+	left: 0;
+	z-index: 1;
+
+}
+
+/*Especificaciones*/
+header .container
+{
+	
+	display: flex;/*Comportamiento de bloques,flex ocupa el espacio que se tiene a los elementos hijos*/
+	justify-content: space-between;/*Propiedad que trabaja en propiedad al elemento x*//*space se acomodan de acuerdo al espacio que tienen con un mismo espacio*/
+	align-items: center;/*se ocupa el eje y para centrarlo*/
+
+}
+/*la barra de menu no se vera solo para dispositivos moviles o tamaños peueños*/
+header .container .barrahamb{
+		display: none;
+		position: relative;
+		
+}
+/*el logo , ubicacion de todoo loque este en container de cabecera*/
+header .container .logo{
+	width: 95px;
+
+}
+header .container .logo12{
+	width: 95px;
+
+}
+
+
+header .container nav a{
+	color: limegreen;/* agrega color de letras encabezado */
+	text-decoration: none;/*quita lo subrayado*/
+	margin: 0 15px ; /*espacio hacia afuera, pixeles a los lados entre si*/
+}
+footer{
+	
+	background-color: darkblue;
+	color: whitesmoke;
+
+}
+footer .barra-footer{
+/*Barra de derechos reservados*/
+background-color: darkgreen; /*color*/
+text-align: center;/*alinear texto al centro*/
+padding: 15px, 15px;/* derecha e izquierda epacio */
+/*Arriba y abajo espacios*/
+padding-bottom: 5px;
+padding-top: 5px;
+
+}
+footer ul{
+	padding-right: 0;
+	list-style: none;/*quitar puntos de lista*/
+}
+.boton{
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 20px;
+	border: none;
+}
+.boton.boton-azul{
+	/*la clase es la misma solo cambia nombre*/
+
+	color: white;/*color letra de boton*/
+	background-color: darkblue;  /*color fondo de boton*/
+	font-size: 20px; /*tipo y tamaño letra de boton*/
+	font-weight: bold; /*color negritas en letras de boton*/
+}
+.boton.boton-verde{
+	/*la clase es la misma solo cambia nombre*/
+
+	color: white;/*color letra de boton*/
+	background-color: darkblue;  /*color fondo de boton*/
+	font-size: 10px; /*tipo y tamaño letra de boton*/
+	font-weight: bold; /*color negritas en letras de boton*/
+	border: 1px solid greenyellow;
+}
+.boton.boton-blanco{
+	/*la clase es la misma solo cambia nombre*/
+
+	color: black;/*color letra de boton*/
+	background-color:whitesmoke;  /*color fondo de boton*/
+	font-size: 20px; /*tipo y tamaño letra de boton*/
+	font-weight: bold; /*color negritas en letras de boton*/
+}
+
+.seccion{
+	/*Clase seccion tamaño*/
+	padding-top: 60px ;
+	padding-bottom: 60px;
+}
+
+.container{
+
+	width:1140px;/*todos los container tendran lo mismo en ancho=width*/
+	margin: 0 auto;/*los margenes de arriba y abajo van a ser 0 y los costados es automatico*/
+	padding-right: 15px ;/*margen hacia dentro */
+	padding-left: 15px;/*margen hacia dentro */
+	position: relative;
+}
+.container-fluid{
+	width: 100%;
+	padding-right: 30p;/*margen hacia dentro */
+	padding-left: 0;/*margen hacia dentro */
+	position: relative;
+}
+
+.cuadrado-perfecto{
+	width: 95%;
+	padding-bottom: 100% ;
+	position: relative;
+}
+.cuadrado-perfecto img{
+	width: 100%;
+	height: 100%;
+	/*object-fit: cover;*/
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;/*si no cabe la columna se brinca hacia abajo, nowrap todas en una fila*/
+	margin-left: 15px ;
+	margin-right: 15px;
+}
+
+.columna{
+	padding-right: 5px ;
+	padding-left: 5px ;
+}
+
+.columna-33{
+	width: 25%;
+}
+/*Formulario*/
+.columna-50{
+	width: 100%;
+}
+.ayuda{
+   text-align: center;
+   width: 100%;
+   top: 0;
+
+}
+.ayuda big{
+	color: greenyellow;
+}
+
+.empujar-50{
+	margin-left:50% ;
+}
+.empujar-0{
+	margin-left: 0;
+}
+
+
+/*llamadas por id*/
+
+#inicio{
+	position: relative;
+}
+
+#inicio img{
+
+	width: 100%;
+	display: block;	/*se acomoda el bloque*/
+}
+ 
+#inicio .bloque-inicio{
+	position: absolute;
+
+	top: 20%;/*el centro de la seccion de bienvenidos arriva o abajo*/
+	left: 40%;	/*centra imagen derecha e izquierda */
+	width: 800px; /*tamaño de letras pixeles */
+	text-align: center; /*centrar textos dentro de primer bloque de bienvenidas */
+	margin-left: -230px;/*se regresa el margen hacia atras ,solo el margin se ocupa pocicion negativoo*/
+}
+#inicio .bloque-inicio h1{
+	/*Color de el h1 y tamaño y color*/
+	color: darkblue;
+	font-size: 80px;
+}
+#inicio .bloque-inicio p{
+	/*Color de el  y tamaño y color*/
+	color: dark;
+	font-size: 50px;
+}
+
+#nosotros{
+	background-image: url(img/fe.jpg) ;
+	background-size: cover; /*aprovecha el tamaño de fondo*/
+
+
+}
+#nosotros p{
+	color: black;  /*color de texto en la imagen de nosotros*/
+	text-align: center;/*centra texto en la imagen de nosotros*/
+	font-size: 40px;/*tamaño de nosotros*/
+	margin: 0;
+
+}
+#formatos .bloque-registro{/*bloque de formatos*/
+
+	border: 5px solid greenyellow;/*Borde: tamaño, tipo de borde ,color*/
+}
+#formatos .bloque-registro .bloque-img-registro{
+
+}
+#formatos .bloque-registro .bloque-img-registro img{
+	width: 100%;
+}
+#formatos .bloque-registro .bloque-img-registro.cuadrado-perfecto{
+	padding-bottom: 55.25%;
+}
+
+#formatos .bloque-registro .bloque-contenido-registro{
+	padding: 15px;
+}
+#formatos .bloque-registro .bloque-contenido-registro h3{
+	margin-top: 0;
+	font-size: 25px;
+}
+
+#galeria{
+
+}
+#instrucciones h4{
+	padding-right: 60px ;
+	padding-left: 60px;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	color: darkblue;
+	font-size: 30px;
+	width: 100%;
+}
+#instrucciones img{
+	filter: grayscale(1);/*se mantienen sin color */
+}
+#instrucciones .cuadrado-perfecto:hover img{
+	filter: grayscale(0);/*el cursor ensima de la imagen la imagen se ilumina de colores*/
+}
+#instrucciones .cuadrado-perfecto:hover h4{
+	display: none;;/*el cursor ensima de la imagen se quita el texto*/
+}
+/*Buzon de quejas*/
+#ayuda{
+	position: relative;
+}
+
+#ayuda{
+	position: relative;
+}
+#ayuda img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+#ayuda form{
+	padding: 60px;
+	background-color: darkblue;
+}
+
+#ayuda form .form-block{
+	width: 100%;
+	margin-bottom: 15px ;
+}
+#ayuda form .form-block .form-control{
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid greenyellow;
+	width: 100%;
+	padding-right: 5px 10px;
+
+}
+/*cuadros de texto*/
+#ayuda form .form-block textarea{
+	display: block;
+	height: 100px;
+	font-size: 18px;
+	border: 1px solid greenyellow;
+	width: 100%;
+	padding-right: 5px 10px;
+
+}
+
+
+/*Funcionan para los dispositivos que tengan este maximo de ancho este tamaño*/
+@media(max-width:  767px)
+{
+	body{
+		font-size: 10px;
+		text-align: center;
+	}
+
+	header .container nav{
+		position: fixed;/*posicion fija de menu*/
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		padding-right: 15px;
+		padding-left: 15px;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column; /*se hacen columnas en lugar de filas*/
+		transition: all 0.4s ease;
+		transform: translateX(100%);
+	}
+	header .container nav.open{
+		/*la barra de menu se abre*/
+		transform: translateX(0);
+	}
+
+	header .container nav a{
+		font-size: 30px;
+		margin: 15px 0;
+	}
+	header .container .barrahamb{
+		display: block;
+		font-size: 40px;
+		color: darkgreen;
+		position: relative;
+		/*Para que se regrese el menu en movil*/
+	}
+	.container{
+		width: 100%;
+	}
+	.columna-movil-100{
+		width: 100%;
+	}
+	.columna-movil-50{
+		width: 50%;
+	}
+	empujar-mobile-0{
+		margin-left: 0;
+		/*para que el formulario quede sin espacios*/
+	}
+	
+
+
+
+	#inicio{
+		height: 100vh;
+	}
+
+	#inicio img{
+		height: 100%;
+		object-fit:cover;/*ocupa todo el espacio disponible*/
+		object-position: center;/*se centra*/
+	}
+}
